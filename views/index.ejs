@@ -1,0 +1,69 @@
+<% include partials/header %>
+
+    <div class="container">
+      <div class="row">
+        <img src="https://i0.wp.com/www.vowelor.com/wp-content/uploads/2017/01/Top-Ten-Biggest-libraries-in-the-world.jpeg?fit=1280%2C485" alt="" >
+      </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <br>
+            <div class="row">
+            <br>
+            <% Blogs.forEach(function(blog){%>
+            <div class="card" style="width: 27rem;padding:10px;">
+                    <img class="card-img-top rounded" height="400rem" src="<%=blog.image%>" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><%=blog.title%></h5>
+                      <p class="card-text"><%-blog.body.substring(0,500)%>....
+                        <br>
+                        Created On: <%=blog.created.toDateString()%></p>
+                      <a href="/blogs/<%=blog._id%>" class="btn btn-primary">Read More</a>
+                    </div>
+            </div>
+            <p>
+
+            </p>
+
+            <%})%>
+            </div>
+          </div>
+
+
+
+            <div class="col-md-4" align="right">
+              <div class="card" style="width: 26rem;">
+              <div class="card-body" text-align="left">
+                <h5 class="card-title">About the Author</h5>
+                <img src="images/FullSizeRender.jpg" alt="unavialable">
+                <br>
+                <br>
+                <h6>Joeldeep Kaur</h6>
+                <p class="card-text" text-align="justify">To begin with it's very relaxing. You can sit down at a quiet place and just forget about the world
+                  around you for a while. Sometimes when I feel like I have a million things to do I take a
+                  break, make a cup of tea and cuddle up in the corner of the sofa with a good book. After just a little
+                  while of reading I've got my strength up to take care of everything. It's also a great way to calm down
+                  before going to bed.
+                  To sum things up you can say that the best way to learn things, or to develop your language is to read.
+                  And though it's educating it's also very relaxing and entertaining. Imagine a hot summerday
+                  on the beach with a cold lemonade and a good book. Personally I can't think of anything better!</p>
+                <hr>
+                <!-- <a href="" class="card-link">Contact Me</a><br> -->
+                <h5>Contact Me</h5>
+                  <div id="map"></div>
+                  <br>
+                  <!-- <img height="15px" width="5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-email-128.png" alt=""> -->
+                  <h6>Mail me at:
+                    <a href="mailto:fjoeldeepkaur@hawk.iit.edu">
+                        fjoeldeepkaur@hawk.iit.edu
+                    </a></h6>
+                <h5><a href="/blogs/new">Add New Blog</a></h5>
+
+
+            </div>
+            </div>
+        </div>
+  </div>
+<% include partials/footer %>

@@ -1,0 +1,48 @@
+<% include partials/header %>
+  <!-- <h1>NEW FORM</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="ui form" method="post" action="/blogs">
+                  <div class="field">
+                    <label>Title</label>
+                    <input type="text" placeholder="Enter the title" name="blog[title]">
+                  </div>
+                  <div class="field">
+                    <label>Image</label>
+                     <input type="text" placeholder="Enter the image" name="blog[image]">
+                  </div>
+                  <div class="field">
+                    <label>BLog Text</label>
+                      <textarea name="blog[body]"></textarea>
+                  </div>
+                  <button class="ui button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+  <h1 style="text-align: center">Add New Blog</h1>
+  <div style="width: 30%; margin: 25px auto;">
+      <form method="POST" action="/blogs">
+          <div class="form-group">
+              <label>Title</label>
+              <input class="form-control" type="text" placeholder="Enter the title" name="blog[title]">
+          </div>
+          <div class="form-group">
+              <label>Image</label>
+              <input class="form-control" type="text" placeholder="Enter the image" name="blog[image]">
+          </div>
+          <div class="form-group">
+              <label>Blog Text</label><br>
+              <textarea  name="blog[body]" style="width: 380px;"></textarea>
+          </div>
+
+          <div class="form-group">
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+          </div>
+
+      </form>
+  <a href="/blogs">Go Back</a>
+  </div>
+<% include partials/footer %>

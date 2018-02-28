@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+  <!-- <div class="container">
+      <%=blog.title%><br>
+      <img src="<%=blog.image%>" alt="image unavialable"><br>
+      <%- blog.body%><br>
+      <%=blog.created.toDateString()%><br>
+      <a href="/blogs/<%=blog._id%>/edit">EDIT</a>
+      <form method="POST" action="/blogs/<%=blog._id%>?_method=DELETE">
+          <input type="submit" value="DELETE">
+      </form>
+  </div> -->
+  <br>
+  <div class="container" align="center">
+  <div class="card" style="width: 58rem;">
+    <img class="card-img-top" src="<%=blog.image%>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%=blog.title%></h5>
+      <p class="card-text"><%- blog.body%><br>
+      <%=blog.created.toDateString()%></p>
+      <a href="/blogs/<%=blog._id%>/edit" class="btn btn-primary">EDIT</a>
+      <br>
+      <br>
+      <form method="POST" action="/blogs/<%=blog._id%>?_method=DELETE">
+          <input type="submit" value="DELETE">
+      </form>
+    </div>
+    <a href="/blogs">Go Back</a>
+  </div>
+  </div>
+<% include ./partials/footer %>
