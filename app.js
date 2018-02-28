@@ -5,7 +5,8 @@ var bodyParser=require("body-parser");
 var methodOverride=require("method-override");
 var expressSanitizer=require("express-sanitizer");
 
-mongoose.connect("mongodb://localhost/restfulblogapp");
+// mongoose.connect("mongodb://localhost/restfulblogapp");
+mongoose.connect("mongodb://Joeldeep:password@ds251217.mlab.com:51217/restfullblogspageapp");
 app.use(express.static(__dirname + '/public'));
 var blogSchema=new mongoose.Schema({
 
